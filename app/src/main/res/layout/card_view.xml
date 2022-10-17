@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="0.5dp"
+    android:layout_marginBottom="0.5dp"
+    android:background="@color/black"
+    android:elevation="4dp">
+
+    <ImageView
+        android:id="@+id/iv_profil_foto"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/profil_foto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/chivo"
+        android:gravity="center"
+        android:text="Elvan Arviş"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/iv_profil_foto"
+        app:layout_constraintTop_toTopOf="@id/iv_profil_foto" />
+
+    <ImageView
+        android:id="@+id/iv_tik"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="2dp"
+        android:src="@drawable/tik"
+        app:layout_constraintBottom_toBottomOf="@id/tv_name"
+        app:layout_constraintStart_toEndOf="@id/tv_name"
+        app:layout_constraintTop_toTopOf="@id/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/chivo"
+        android:gravity="center"
+        android:text=" @elvanarvis"
+        android:textColor="@color/dark_grey"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_tik"
+        app:layout_constraintStart_toEndOf="@id/iv_tik"
+        app:layout_constraintTop_toTopOf="@id/iv_tik" />
+
+    <ImageView
+        android:id="@+id/iv_dot"
+        android:layout_width="3dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/dot"
+        app:layout_constraintBottom_toBottomOf="@id/tv_nickname"
+        app:layout_constraintStart_toEndOf="@id/tv_nickname"
+        app:layout_constraintTop_toTopOf="@id/tv_nickname" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/chivo"
+        android:gravity="top"
+        android:text="12 sa"
+        android:textColor="@color/dark_grey"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_nickname"
+        app:layout_constraintStart_toEndOf="@id/iv_dot"
+        app:layout_constraintTop_toTopOf="@id/tv_nickname" />
+
+    <ImageView
+        android:id="@+id/iv_menu"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/tree_dot"
+        app:layout_constraintBottom_toBottomOf="@id/tv_nickname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_nickname" />
+
+    <TextView
+        android:id="@+id/tv_paragraf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/chivo"
+        android:text="Terapi gibi ortam..."
+        android:textColor="@color/extra_light_grey"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@id/iv_menu"
+        app:layout_constraintStart_toStartOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+    <ImageView
+        android:id="@+id/iv_timage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/simone_foto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_paragraf" />
+
+    <ImageView
+        android:id="@+id/iv_yorum"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/yorum"
+        app:layout_constraintStart_toStartOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/iv_timage" />
+
+    <TextView
+        android:id="@+id/tv_yorum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/chivo"
+        android:gravity="center"
+        android:text="10"
+        android:textColor="@color/dark_grey"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_yorum"
+        app:layout_constraintStart_toEndOf="@id/iv_yorum"
+        app:layout_constraintTop_toTopOf="@id/iv_yorum" />
+
+    <ImageView
+        android:id="@+id/iv_retweet"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="142dp"
+        android:src="@drawable/retweet"
+        app:layout_constraintBottom_toBottomOf="@id/iv_yorum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_yorum" />
+
+    <TextView
+        android:id="@+id/tv_retweet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/chivo"
+        android:gravity="center"
+        android:text="63"
+        android:textColor="@color/dark_grey"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_retweet"
+        app:layout_constraintStart_toEndOf="@id/iv_retweet"
+        app:layout_constraintTop_toTopOf="@id/iv_retweet" />
+
+    <ImageView
+        android:id="@+id/iv_like"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="218dp"
+        android:src="@drawable/kalp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_yorum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_yorum" />
+
+    <TextView
+        android:id="@+id/tv_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/chivo"
+        android:gravity="center"
+        android:text="1.205"
+        android:textColor="@color/dark_grey"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_like"
+        app:layout_constraintStart_toEndOf="@id/iv_like"
+        app:layout_constraintTop_toTopOf="@id/iv_like" />
+
+    <ImageView
+        android:id="@+id/iv_share"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="84dp"
+        android:src="@drawable/paylas"
+        app:layout_constraintBottom_toBottomOf="@id/iv_yorum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_yorum" />
+
+    <TextView
+        android:id="@+id/blank"
+        android:layout_width="wrap_content"
+        android:layout_height="4dp"
+        android:text=" "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_yorum" />
+</androidx.constraintlayout.widget.ConstraintLayout>

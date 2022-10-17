@@ -4,15 +4,121 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_grey"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/black"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:elevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/tb_img1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start"
+            android:src="@drawable/profil_foto" />
+
+        <ImageView
+            android:id="@+id/tb_img2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/twitter_logo"/>
+
+        <ImageView
+            android:id="@+id/tb_img3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:src="@drawable/sag_taraf"/>
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <ImageView
+        android:id="@+id/bottom_img"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/black"
+        />
+
+    <ImageView
+        android:id="@+id/btm_img1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:src="@drawable/bir"
+        app:layout_constraintTop_toTopOf="@id/bottom_img"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_img"
+        app:layout_constraintStart_toStartOf="@id/bottom_img"
+        />
+
+    <ImageView
+        android:id="@+id/btm_img2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/iki"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_img"
+        app:layout_constraintTop_toTopOf="@id/bottom_img"
+        app:layout_constraintStart_toEndOf="@id/btm_img1"
+        app:layout_constraintEnd_toStartOf="@id/btm_img3"
+         />
+
+    <ImageView
+        android:id="@+id/btm_img4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/dort"
+        app:layout_constraintTop_toTopOf="@id/bottom_img"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_img"
+        app:layout_constraintEnd_toEndOf="@id/bottom_img"
+         />
+
+    <ImageView
+        android:id="@+id/btm_img3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/uc"
+        app:layout_constraintTop_toTopOf="@id/bottom_img"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_img"
+        app:layout_constraintStart_toEndOf="@id/btm_img2"
+        app:layout_constraintEnd_toStartOf="@id/btm_img4"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toTopOf="@id/bottom_img"
+        />
+
+
+    <ImageView
+        android:id="@+id/fab"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_img"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/frame1"
+        android:elevation="8dp"
+        />
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
